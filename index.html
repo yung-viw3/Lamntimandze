@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MY HEART!!!</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    overflow:hidden;
+}
+
+.container{
+    text-align:center;
+    max-width:700px;
+    padding:40px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    border-radius:20px;
+    box-shadow:0 0 40px rgba(0,0,0,0.4);
+    animation:fadeIn 1.5s ease forwards;
+}
+
+h1{
+    font-size:48px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:18px;
+    opacity:0.8;
+    margin-bottom:40px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:50px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.yes{
+    background:#22c55e;
+    color:white;
+}
+
+.no{
+    background:#ef4444;
+    color:white;
+    position:relative;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>MY HEART!!!!!</h1>
+    <p>
+We are still getting married right
+dont mind the silence ngisekhona mawukhona 
+juh working on big projects thought i'd make this for you
+its been a minute
+    </p>
+
+    <div class="buttons">
+        <button class="yes" onclick="yesClicked()">Let's Do This</button>
+        <button class="no" onmouseover="moveButton()">Not Yet</button>
+    </div>
+</div>
+
+<script>
+function yesClicked(){
+    alert("I knew it. Let’s stop playing and do this properly ❤️");
+}
+
+function moveButton(){
+    const btn = document.querySelector('.no');
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    btn.style.position = "absolute";
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
